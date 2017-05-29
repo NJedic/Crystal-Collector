@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en_us">
+<head>
+	<meta charset="UTF-8">
+	<title>Crystal Game</title>
+
+<!-- Link to Reset Css -->
+<link rel = "stylesheet" type="text/css" href="assets/css/reset.css">	
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- 	Jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Link to Relative CSS -->
+<link rel = "stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+	<!--Header-->
+	<div class="page-header">
+		<div class="panel panel-default">
+  			<div class="panel-heading">
+   				<h3 class="panel-title">Crystal Collector</h3>
+  			</div>
+  			<div class="panel-body">
+    			<p>
+    				Use your crystals to defeat the game!
+				</p>
+				<p><ul class="list-group">
+					<li class="list-group-item">At the beginning of the game, you will be shown a random number! Your job is to match that number without going over!</li>
+					<li class="list-group-item">Each of the four crystals below has a specific value. Click on them to add that value to your total number but - be careful! - if you go over, you lose!</li>
+					<li class="list-group-item">The value of each crystal is hidden from you until you click on it, so keep your eyes peeled!</li>
+					<li class="list-group-item">At the beginning of every round, all of the numbers will reset!</li>
+				</ul></p>
+				<p>
+					Good Luck!
+				</p>
+  			</div>
+		</div>
+	</div>
+
+	<!--Main Div-->
+	<div class="container">
+		<div class="row">
+			<!--Column where the computer's generated number lives-->
+			<div class="col-md-6">
+				<div class="panel panel-default">
+ 					<div class="panel-heading">
+    					<h3 class="panel-title">This Round's Number:</h3>
+  					</div>
+  						<div class="panel-body">
+    					<div id="compNumber"></div>
+  					</div>
+				</div>
+			</div>
+			<!--Column where the player's number lives-->
+			<div class="col-md-6">
+				<div class="panel panel-default">
+ 					<div class="panel-heading">
+    					<h3 class="panel-title">Your Number:</h3>
+  					</div>
+  						<div class="panel-body">
+    					<div id="playerNumber"></div>
+  					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<!--Column where the Score Lives-->
+			<div class="col-md-6">
+				<div class="panel panel-default">
+ 					<div class="panel-heading">
+    					<h3 class="panel-title">Your Score:</h3>
+  					</div>
+  						<div class="panel-body">
+    					Wins: <span id="wins"></span>
+    					Losses: <span id="losses"></span>
+  					</div>
+				</div>
+			</div>
+			<!--Column where the gems live-->
+			<div class="col-md-6">
+				<div class="panel panel-default">
+ 					<div class="panel-heading">
+    					<h3 class="panel-title">Gems:</h3>
+  					</div>
+  						<div class="panel-body">
+    						<div class="btn-group" role="group" aria-label="...">
+  								<button type="button" class="btn btn-default" id="button1"><img id="btnImg" src="https://vignette3.wikia.nocookie.net/steven-universe/images/2/2c/Yellow_Diamond_Gemstone.png/revision/latest?cb=20160108001013"></button>
+  								<button type="button" class="btn btn-default" id="button2"><img id="btnImg" src="https://vignette4.wikia.nocookie.net/stevenuniverse-fanon/images/8/89/Chalcedony_Gem_%28Apatite%29.png/revision/latest/scale-to-width-down/185?cb=20150217033109"></button>
+ 								<button type="button" class="btn btn-default" id="button3"><img id="btnImg" src="https://vignette3.wikia.nocookie.net/stevenuniverse-fanon/images/9/94/Charoite_Gem_%28Rosaline%29.png/revision/latest/scale-to-width-down/185?cb=20150503020939"></button>
+ 								<button type="button" class="btn btn-default" id="button4"><img id="btnImg" src="https://vignette3.wikia.nocookie.net/stevenuniverse-fanon/images/c/cb/Teal_Zircon_Gem_%28Kyanite%29.png/revision/latest/scale-to-width-down/185?cb=20150429215911"></button>
+							</div>
+  					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+<!-- Link to Relative JavaScript File -->
+<script type="text/javascript" src="assets/javascript/game.js"></script>
+
+</body>
+</html>
