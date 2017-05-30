@@ -11,7 +11,13 @@ var loss = 0;
 var playerNumber = 0;
 
 // Variable that represents the computer number: a random number is chosen between 20 and 60
-var chosenNumber = Math.floor(Math.random() * 60) + 20; 
+var chosenNumber = Math.floor(Math.random() * 60) + 19; 
+
+//Variables for the gem button value: a random number is chosen between 1 and 11 for each button
+var buttonNumber = Math.floor(Math.random() * 11) + 1;
+var buttonNumberTwo = Math.floor(Math.random() * 11) + 1;
+var buttonNumberThree = Math.floor(Math.random() * 11) + 1;
+var buttonNumberFour = Math.floor(Math.random() * 11) + 1;
 
 //FUNCTIONS
 //============================
@@ -27,7 +33,7 @@ function resetW(){
 	//Zero is written to the DOM
 	$("#playerNumber").html(playerNumber);
 	//New number is chosen and written to the DOM
-	var chosenNumber = Math.floor(Math.random() * 60) + 20; 
+	var chosenNumber = Math.floor(Math.random() * 60) + 19; 
 	$("#compNumber").html(chosenNumber);
 }
 
@@ -42,7 +48,7 @@ function resetL(){
 	//Zero is written to the DOM
 	$("#playerNumber").html(playerNumber);
 	//New number is chosen and written to the DOM
-	var chosenNumber = Math.floor(Math.random() * 100) + 20; 
+	var chosenNumber = Math.floor(Math.random() * 60) + 19; 
 	$("#compNumber").html(chosenNumber);
 }
 
@@ -52,7 +58,7 @@ function resetL(){
 function gameCheck(){
 	//If the Player's Number equals the Computer's Number...
 	
-	if (playerNumber == chosenNumber){
+	if (playerNumber === chosenNumber){
 		//Player is alerted they won
 		alert("You win!");
 		//Game resets with +1 win
@@ -65,6 +71,7 @@ function gameCheck(){
 		alert("You Lose! Try Again!");
 		//Game resets with +1 Loss
 		resetL();
+
 	}
 }
 
@@ -84,23 +91,18 @@ $(document).ready(function(){
 	//Chosen number is pushed into the compNumber div
 	$("#compNumber").html(chosenNumber);
 
-	// for the gem button value: a random number is chosen between 1 and 11 for each button
-	var buttonNumber = Math.floor(Math.random() * 11) + 1;
-	var buttonNumberTwo = Math.floor(Math.random() * 11) + 1;
-	var buttonNumberThree = Math.floor(Math.random() * 11) + 1;
-	var buttonNumberFour = Math.floor(Math.random() * 11) + 1;
-
-	//When the gem button is clicked, that value is then assigned and pushed to an array
+	//When the gem button is clicked, that value is then assigned
 	$("#button1").on("click", function(){
-		$("#button1").val(buttonNumber);
 			console.log(buttonNumber);
+		//That number is then added to the displayed playerNumber...
 		playerNumber += buttonNumber;
+		//...and written to the DOM
 		$("#playerNumber").html(playerNumber);
+		//gameCheck function is run
 		gameCheck();
 	})
 
 	$("#button2").on("click", function(){
-		$("#button2").val(buttonNumberTwo);
 			console.log(buttonNumberTwo);
 		playerNumber += buttonNumberTwo;
 		$("#playerNumber").html(playerNumber);
@@ -108,7 +110,6 @@ $(document).ready(function(){
 	})
 
 	$("#button3").on("click", function(){
-		$("#button3").val(buttonNumberThree);
 			console.log(buttonNumberThree);
 		playerNumber += buttonNumberThree;
 		$("#playerNumber").html(playerNumber);
@@ -116,7 +117,6 @@ $(document).ready(function(){
 	})
 
 	$("#button4").on("click", function(){
-		$("#button4").val(buttonNumberFour);
 			console.log(buttonNumberFour);
 		playerNumber += buttonNumberFour;
 		$("#playerNumber").html(playerNumber);
