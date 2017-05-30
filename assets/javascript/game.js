@@ -93,6 +93,9 @@ $(document).ready(function(){
 	})
 
 	//That array is then added up and pushed to the playerNumber div
+	
+	//var playerNumber = the added together array
+
 	function getSum(total, num) {
     return total + num;
 	}

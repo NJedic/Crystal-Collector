@@ -2,7 +2,7 @@
 <html lang="en_us">
 <head>
 	<meta charset="UTF-8">
-	<title>Crystal Game</title>
+	<title>Crystal Collector</title>
 
 <!-- Link to Reset Css -->
 <link rel = "stylesheet" type="text/css" href="assets/css/reset.css">	
@@ -14,6 +14,8 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Link to Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Monoton|Mystery+Quest" rel="stylesheet">
 <!-- Link to Relative CSS -->
 <link rel = "stylesheet" type="text/css" href="assets/css/style.css">
 </head>
@@ -23,20 +25,21 @@
 	<div class="page-header">
 		<div class="panel panel-default">
   			<div class="panel-heading">
-   				<h3 class="panel-title">Crystal Collector</h3>
+   				<h3 class="panel-title" id="header">Crystal Collector</h3>
   			</div>
   			<div class="panel-body">
     			<p>
     				Use your crystals to defeat the game!
 				</p>
-				<p><ul class="list-group">
-					<li class="list-group-item">At the beginning of the game, you will be shown a random number! Your job is to match that number without going over!</li>
-					<li class="list-group-item">Each of the four crystals below has a specific value. Click on them to add that value to your total number but - be careful! - if you go over, you lose!</li>
-					<li class="list-group-item">The value of each crystal is hidden from you until you click on it, so keep your eyes peeled!</li>
-					<li class="list-group-item">At the beginning of every round, all of the numbers will reset!</li>
+				<p><ul class="list-group" id="list">
+					<li class="list-group-item" id="list"><strong>Rules:</strong></li>
+					<li class="list-group-item" id="list">At the beginning of the game, you will be shown a random number! Your job is to match that number without going over!</li>
+					<li class="list-group-item" id="list">Each of the four crystals below has a specific value. Click on them to add that value to your total number but - be careful! - if you go over, you lose!</li>
+					<li class="list-group-item" id="list">The value of each crystal is hidden from you until you click on it, so keep your eyes peeled!</li>
+					<li class="list-group-item" id="list">At the beginning of every round, all of the numbers will reset!</li>
 				</ul></p>
 				<p>
-					Good Luck!
+					<strong>Good Luck!</strong>
 				</p>
   			</div>
 		</div>
@@ -49,7 +52,7 @@
 			<div class="col-md-6">
 				<div class="panel panel-default">
  					<div class="panel-heading">
-    					<h3 class="panel-title">This Round's Number:</h3>
+    					<h3 class="panel-title" id="pTitle">This Round's Number:</h3>
   					</div>
   						<div class="panel-body">
     					<div id="compNumber"></div>
@@ -60,7 +63,7 @@
 			<div class="col-md-6">
 				<div class="panel panel-default">
  					<div class="panel-heading">
-    					<h3 class="panel-title">Your Number:</h3>
+    					<h3 class="panel-title" id="pTitle">Your Number:</h3>
   					</div>
   						<div class="panel-body">
     					<div id="playerNumber"></div>
@@ -74,11 +77,14 @@
 			<div class="col-md-6">
 				<div class="panel panel-default">
  					<div class="panel-heading">
-    					<h3 class="panel-title">Your Score:</h3>
+    					<h3 class="panel-title" id="pTitle">Your Score:</h3>
   					</div>
   						<div class="panel-body">
-    					Wins: <span id="wins"></span>
-    					Losses: <span id="losses"></span>
+    					<div id="scores">
+							Wins: <span id="wins"></span>
+							<br>
+							Losses: <span id="losses"></span>
+						</div>
   					</div>
 				</div>
 			</div>
@@ -86,7 +92,7 @@
 			<div class="col-md-6">
 				<div class="panel panel-default">
  					<div class="panel-heading">
-    					<h3 class="panel-title">Gems:</h3>
+    					<h3 class="panel-title" id="pTitle">Gems:</h3>
   					</div>
   						<div class="panel-body">
     						<div class="btn-group" role="group" aria-label="...">

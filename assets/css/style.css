@@ -1,5 +1,52 @@
+/*Affects the whole page*/
+body{
+	background: #741e0d;
+	font-family: 'Mystery Quest', cursive;
+	text-align: center;
+}
+
+/*Game Main Title*/
+#header{
+	font-size: 75px;
+	color: #ea950f;
+	text-shadow: 2px 2px #741e0d;
+	background-image: none;
+	background-color: #ecc11d;
+}
+
+/*Panel Titles*/
+#pTitle{
+	font-size: 40px;
+	color: #ea950f;
+	text-shadow: 2px 2px #741e0d;
+	background-color: #ecc11d;
+}
+.panel-heading{
+	padding: 0;
+}
+
+/*Panel Content*/
+.panel-body{
+	font-size: 25px;
+	background-color: #f2680f;
+	color: #741e0d;
+}
+/*Rules*/
+#list{
+	background-color: #979f32;
+}
+
+#compNumber, #playerNumber, #scores{
+	font-size: 30px;
+}
+
 /*Button Gem Images*/
 #btnImg{
+	background-color: #979f32;
 	width: 100px;
 	height: 100px;
+}
+.btn-default{
+	padding: 0;
+	margin-right: 5px;
 }
