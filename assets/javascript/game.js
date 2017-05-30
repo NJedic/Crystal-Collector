@@ -21,37 +21,25 @@ var buttonNumberFour = Math.floor(Math.random() * 11) + 1;
 
 //FUNCTIONS
 //============================
-
-//Function to reset the game if you win
-function resetW(){
-	//+1 Win
-	win++;
-	//Wins are written to the DOM
-	$("#wins").html(win);
+function getNewRandomNumbers () {
+	buttonNumber = Math.floor(Math.random() * 11) + 1;
+	buttonNumberTwo = Math.floor(Math.random() * 11) + 1;
+	buttonNumberThree = Math.floor(Math.random() * 11) + 1;
+	buttonNumberFour = Math.floor(Math.random() * 11) + 1;	
+}
+//Function to reset the game
+function reset(){
 	//Player's Number starts at zero again
 	playerNumber = 0;
 	//Zero is written to the DOM
 	$("#playerNumber").html(playerNumber);
-	//New number is chosen and written to the DOM
-	var chosenNumber = Math.floor(Math.random() * 60) + 19; 
+	//New number is chosen
+	var chosenNumber = Math.floor(Math.random() * 60) + 19;
+	//New number is written to the DOM 
 	$("#compNumber").html(chosenNumber);
+	//New random numbers are assigned to crystals
+	getNewRandomNumbers();
 }
-
-//Function to reset the game if you lose
-function resetL(){
-	//+1 Loss
-	loss++;
-	//Losses are written to the DOM
-	$("#losses").html(loss);
-	//Player's Number starts out at zero again
-	playerNumber = 0;
-	//Zero is written to the DOM
-	$("#playerNumber").html(playerNumber);
-	//New number is chosen and written to the DOM
-	var chosenNumber = Math.floor(Math.random() * 60) + 19; 
-	$("#compNumber").html(chosenNumber);
-}
-
 
 
 //Setting up the win/lose parameters
@@ -60,18 +48,25 @@ function gameCheck(){
 	
 	if (playerNumber === chosenNumber){
 		//Player is alerted they won
-		alert("You win!");
-		//Game resets with +1 win
-		resetW();
+		alert("Scooby-Dooby-Doo! You won!");
+		//Add +1 win
+		win++;
+		//Wins are written to the DOM
+		$("#wins").html(win);
+		//Run the reset function
+		reset();
 	};
 
 	//If the Player's Number is greater than the Computer's Number...
 	if (playerNumber > chosenNumber){
 		//Player is alerted they lost
-		alert("You Lose! Try Again!");
-		//Game resets with +1 Loss
-		resetL();
-
+		alert("Ruh-roh! You lost! Better luck next time!");
+		//Add +1 Loss
+		loss++;
+		//Losses are written to the DOM
+		$("#losses").html(loss);
+		//Run the reset function
+		reset();
 	}
 }
 
@@ -93,7 +88,7 @@ $(document).ready(function(){
 
 	//When the gem button is clicked, that value is then assigned
 	$("#button1").on("click", function(){
-			console.log(buttonNumber);
+			// console.log(buttonNumber);
 		//That number is then added to the displayed playerNumber...
 		playerNumber += buttonNumber;
 		//...and written to the DOM
@@ -103,23 +98,32 @@ $(document).ready(function(){
 	})
 
 	$("#button2").on("click", function(){
-			console.log(buttonNumberTwo);
+			// console.log(buttonNumberTwo);
+		//That number is then added to the displayed playerNumber...
 		playerNumber += buttonNumberTwo;
+		//...and written to the DOM
 		$("#playerNumber").html(playerNumber);
+		//gameCheck function is run
 		gameCheck();
 	})
 
 	$("#button3").on("click", function(){
-			console.log(buttonNumberThree);
+			// console.log(buttonNumberThree);
+		//That number is then added to the displayed playerNumber...
 		playerNumber += buttonNumberThree;
+		//...and written to the DOM
 		$("#playerNumber").html(playerNumber);
+		//gameCheck function is run
 		gameCheck();
 	})
 
 	$("#button4").on("click", function(){
-			console.log(buttonNumberFour);
+			// console.log(buttonNumberFour);
+		//That number is then added to the displayed playerNumber...
 		playerNumber += buttonNumberFour;
+		//..and written to the DOM
 		$("#playerNumber").html(playerNumber);
+		//gameCheck function is run
 		gameCheck();
 	})
 

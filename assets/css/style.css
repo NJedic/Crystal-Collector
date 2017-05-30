@@ -31,9 +31,10 @@ body{
 	background-color: #f2680f;
 	color: #741e0d;
 }
+
 /*Rules*/
 #list{
-	background-color: #979f32;
+	background-color: #b2bb1c;
 }
 
 #compNumber, #playerNumber, #scores{
@@ -42,11 +43,23 @@ body{
 
 /*Button Gem Images*/
 #btnImg{
-	background-color: #979f32;
-	width: 100px;
-	height: 100px;
+	background-color: #b2bb1c;
+	width: 120px;
+	height: 120px;
 }
 .btn-default{
 	padding: 0;
-	margin-right: 5px;
+	margin: 79px 5px 79px 0px;
+
+}
+/*Scooby Doo and the Gang Image*/
+#scooby{
+	width: 500px;
+	height: 350px;
+}
+/*Score Scooby Doo Image*/
+#justScooby{
+	float: left;
+	width: 200px;
+	height: 280px;
 }
