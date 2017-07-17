@@ -21,6 +21,6 @@ Scooby Doo's Crystal Collector is a super groovy game that has you matching your
 * Good Luck, Cool Cat!
 
 
-![Dancing Scooby Gang](https://media.giphy.com/media/u6C3pBu1dWwYo/giphy.giff)
+![Dancing Scooby Gang](https://media.giphy.com/media/u6C3pBu1dWwYo/giphy.gif)
 
 [here!]: https://njedic.github.io/Crystal-Collector/
