@@ -16,9 +16,9 @@ Scooby Doo's Crystal Collector is a super groovy game that has you matching your
 
 * The value of each crystal is hidden from you until you click on it, so keep your eyes peeled!
 
-* At the beginning of every round, all of the numbers will reset!
+* At the beginning of every round, all of the numbers will reset and your wins and losses will be tracked!
 
-* Good Luck, Cool Cat!
+* Good Luck, Cool Cat, and have fun playing!
 
 
 ![Dancing Scooby Gang](https://media.giphy.com/media/u6C3pBu1dWwYo/giphy.gif)
